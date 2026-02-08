@@ -43,7 +43,7 @@ fpv_slave:
 cov: cov_master cov_slave
 
 cov_master:
-	$(JASPER) -batch cov_run.tcl | tee cov_master_run.log
+	$(JASPER) -cov cov_run.tcl | tee cov_master_run.log
 
 cov_slave:
 	$(JASPER) -batch cov_slave_run.tcl | tee cov_slave_run.log

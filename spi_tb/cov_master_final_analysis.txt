@@ -1,5 +1,5 @@
 ============================================================
-SPI MASTER COVERAGE ANALYSIS
+SPI MASTER COVERAGE ANALYSIS (v2 - with shift/miso assertions)
 ============================================================
 
 UNREACHABLE: ITEM 6: {_automatic_coveritem_branch_condition__if_stmt_then__63___B__29_0_1 - spi_master - ../spi_demo/spi_master.v (29,21)-(40,12) <embedded> Unreachable inf PRE reset}

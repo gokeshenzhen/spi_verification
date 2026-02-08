@@ -1,4 +1,4 @@
-# SPI Master - Full COV flow with dynamic waivers
+# SPI Master - COV with dynamic waiver (v2 - with shift_out/shift_in/miso assertions)
 clear -all
 
 analyze -v2k ../spi_demo/spi_master.v
@@ -15,14 +15,12 @@ set_engine_mode {Ht Hp B}
 set_max_trace_length 200
 prove -all
 
-# Measure all types
 check_cov -measure -type {stimuli coi proof}
 
-# ===== Dynamic per-item analysis =====
+# Dynamic item analysis
 set fh [open "cov_master_final_analysis.txt" w]
-
 puts $fh "============================================================"
-puts $fh "SPI MASTER COVERAGE ANALYSIS"
+puts $fh "SPI MASTER COVERAGE ANALYSIS (v2 - with shift/miso assertions)"
 puts $fh "============================================================"
 puts $fh ""
 
@@ -71,7 +69,7 @@ puts $fh ""
 puts $fh "Unreachable IDs: $unreachable_ids"
 puts $fh "Undetermined IDs: $undetermined_ids"
 
-# ===== Add waivers dynamically =====
+# Add waivers dynamically
 if {[llength $unreachable_ids] > 0} {
     check_cov -waivers -add -comment "Structurally unreachable under formal constraints" -cover_item_id $unreachable_ids
 }
@@ -79,10 +77,7 @@ if {[llength $undetermined_ids] > 0} {
     check_cov -waivers -add -comment "Undetermined - functionally unreachable under constraints" -cover_item_id $undetermined_ids
 }
 
-# ===== Generate reports =====
-check_cov -report -type {all} -report_file cov_master_all_items.txt -force
-check_cov -report -type {reachable} -report_file cov_master_reachable_items.txt -force
-check_cov -report -type {unreachable} -report_file cov_master_unreachable_items.txt -force
+# Reports with waiver exclusion
 check_cov -report -type {all} -exclude waived -report_file cov_master_all_excl_waived.txt -force
 check_cov -report -type {reachable} -exclude waived -report_file cov_master_reachable_excl_waived.txt -force
 
@@ -96,4 +91,4 @@ puts $fh "After waivers ($effective covered / $effective effective): 100.00%"
 close $fh
 puts "Done! Analysis written to cov_master_final_analysis.txt"
 
-#exit -force
+exit -force
