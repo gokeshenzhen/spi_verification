@@ -190,11 +190,61 @@ module spi_master_prop (
     // =============================================
     // Data Path Properties
     // =============================================
+
+    // --- MOSI ---
+    property p_mosi_reset;
+        @(posedge clk) !rst_n |-> ##1 (mosi == 1'b0);
+    endproperty
+
     property p_mosi_init;
         @(posedge clk) disable iff (!rst_n)
         (state == IDLE) && start |-> ##1 (mosi == $past(tx_data[7]));
     endproperty
 
+    property p_mosi_update;
+        @(posedge clk) disable iff (!rst_n)
+        (state == TRAILING) && (clk_cnt == clk_div) && (bit_cnt != 3'd0)
+        |-> ##1 (mosi == $past(shift_out[6]));
+    endproperty
+
+    // --- SHIFT_OUT ---
+    property p_shift_out_reset;
+        @(posedge clk) !rst_n |-> ##1 (shift_out == 8'd0);
+    endproperty
+
+    property p_shift_out_load;
+        @(posedge clk) disable iff (!rst_n)
+        (state == IDLE) && start |-> ##1 (shift_out == $past(tx_data));
+    endproperty
+
+    property p_shift_out_shift;
+        @(posedge clk) disable iff (!rst_n)
+        (state == TRAILING) && (clk_cnt == clk_div)
+        |-> ##1 (shift_out == {$past(shift_out[6:0]), 1'b0});
+    endproperty
+
+    // --- SHIFT_IN (references MISO input) ---
+    property p_shift_in_reset;
+        @(posedge clk) !rst_n |-> ##1 (shift_in == 8'd0);
+    endproperty
+
+    property p_shift_in_clear;
+        @(posedge clk) disable iff (!rst_n)
+        (state == IDLE) && start |-> ##1 (shift_in == 8'd0);
+    endproperty
+
+    property p_shift_in_capture;
+        @(posedge clk) disable iff (!rst_n)
+        (state == LEADING) && (clk_cnt == clk_div)
+        |-> ##1 (shift_in == {$past(shift_in[6:0]), $past(miso)});
+    endproperty
+
+    // --- SCLK reset ---
+    property p_reset_sclk;
+        @(posedge clk) !rst_n |-> ##1 (sclk == 1'b0);
+    endproperty
+
+    // --- RX_DATA ---
     property p_rx_data_capture;
         @(posedge clk) disable iff (!rst_n)
         (state == TRAILING) && (clk_cnt == clk_div) && (bit_cnt == 3'd0)
@@ -245,8 +295,25 @@ module spi_master_prop (
     ast_clk_cnt_reset       : assert property (p_clk_cnt_reset_on_match);
     ast_clk_cnt_inc         : assert property (p_clk_cnt_inc);
 
-    // Data path
+    // Data path - MOSI
+    ast_mosi_reset          : assert property (p_mosi_reset);
     ast_mosi_init           : assert property (p_mosi_init);
+    ast_mosi_update         : assert property (p_mosi_update);
+
+    // Data path - shift_out
+    ast_shift_out_reset     : assert property (p_shift_out_reset);
+    ast_shift_out_load      : assert property (p_shift_out_load);
+    ast_shift_out_shift     : assert property (p_shift_out_shift);
+
+    // Data path - shift_in (covers miso)
+    ast_shift_in_reset      : assert property (p_shift_in_reset);
+    ast_shift_in_clear      : assert property (p_shift_in_clear);
+    ast_shift_in_capture    : assert property (p_shift_in_capture);
+
+    // SCLK reset
+    ast_reset_sclk          : assert property (p_reset_sclk);
+
+    // RX data
     ast_rx_data_capture     : assert property (p_rx_data_capture);
 
     // Cover properties for coverage
@@ -257,5 +324,9 @@ module spi_master_prop (
     cov_done_to_idle        : cover property (p_done_to_idle);
     cov_done_pulse          : cover property (p_done_pulse);
     cov_rx_data_capture     : cover property (p_rx_data_capture);
+    cov_shift_out_load      : cover property (p_shift_out_load);
+    cov_shift_out_shift     : cover property (p_shift_out_shift);
+    cov_shift_in_capture    : cover property (p_shift_in_capture);
+    cov_mosi_update         : cover property (p_mosi_update);
 
 endmodule

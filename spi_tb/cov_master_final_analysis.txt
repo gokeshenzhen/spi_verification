@@ -1,37 +1,63 @@
 ============================================================
-SPI MASTER COVERAGE ANALYSIS (FINAL)
+SPI MASTER COVERAGE ANALYSIS
 ============================================================
 
+UNREACHABLE: ITEM 6: {_automatic_coveritem_branch_condition__if_stmt_then__63___B__29_0_1 - spi_master - ../spi_demo/spi_master.v (29,21)-(40,12) <embedded> Unreachable inf PRE reset}
+UNREACHABLE: ITEM 8: {_automatic_coveritem_stmt_condition__nonblocking_assignment__1___S__30_1_1 - spi_master - ../spi_demo/spi_master.v (30,13)-(30,31) <embedded> Unreachable inf PRE reset}
+UNREACHABLE: ITEM 9: {_automatic_coveritem_stmt_condition__nonblocking_assignment__2___S__31_1_1 - spi_master - ../spi_demo/spi_master.v (31,13)-(31,31) <embedded> Unreachable inf PRE reset}
+UNREACHABLE: ITEM 10: {_automatic_coveritem_stmt_condition__nonblocking_assignment__3___S__32_1_1 - spi_master - ../spi_demo/spi_master.v (32,13)-(32,31) <embedded> Unreachable inf PRE reset}
+UNREACHABLE: ITEM 11: {_automatic_coveritem_stmt_condition__nonblocking_assignment__4___S__33_1_1 - spi_master - ../spi_demo/spi_master.v (33,13)-(33,31) <embedded> Unreachable inf PRE reset}
+UNREACHABLE: ITEM 12: {_automatic_coveritem_stmt_condition__nonblocking_assignment__5___S__34_1_1 - spi_master - ../spi_demo/spi_master.v (34,13)-(34,31) <embedded> Unreachable inf PRE reset}
+UNREACHABLE: ITEM 13: {_automatic_coveritem_stmt_condition__nonblocking_assignment__6___S__35_1_1 - spi_master - ../spi_demo/spi_master.v (35,13)-(35,31) <embedded> Unreachable inf PRE reset}
+UNREACHABLE: ITEM 14: {_automatic_coveritem_stmt_condition__nonblocking_assignment__7___S__36_1_1 - spi_master - ../spi_demo/spi_master.v (36,13)-(36,31) <embedded> Unreachable inf PRE reset}
+UNREACHABLE: ITEM 15: {_automatic_coveritem_stmt_condition__nonblocking_assignment__8___S__37_1_1 - spi_master - ../spi_demo/spi_master.v (37,13)-(37,31) <embedded> Unreachable inf PRE reset}
+UNREACHABLE: ITEM 16: {_automatic_coveritem_stmt_condition__nonblocking_assignment__9___S__38_1_1 - spi_master - ../spi_demo/spi_master.v (38,13)-(38,31) <embedded> Unreachable inf PRE reset}
+UNREACHABLE: ITEM 17: {_automatic_coveritem_stmt_condition__nonblocking_assignment__10___S__39_1_1 - spi_master - ../spi_demo/spi_master.v (39,13)-(39,31) <embedded> Unreachable inf PRE reset}
+UNREACHABLE: ITEM 53: {_automatic_coveritem_toggle__clk__2__T__1__24 - spi_master - ../spi_demo/spi_master.v (2,24)-(2,27) <embedded> Unreachable inf PRE -}
+UNREACHABLE: ITEM 54: {_automatic_coveritem_toggle__rst_n__3__T__1__24 - spi_master - ../spi_demo/spi_master.v (3,24)-(3,29) <embedded> Unreachable inf PRE reset}
+UNREACHABLE: ITEM 73: {_automatic_coveritem_toggle__cpol__8__T__1__24 - spi_master - ../spi_demo/spi_master.v (8,24)-(8,28) <embedded> Unreachable inf Ht -}
+UNREACHABLE: ITEM 74: {_automatic_coveritem_toggle__cpha__9__T__1__24 - spi_master - ../spi_demo/spi_master.v (9,24)-(9,28) <embedded> Unreachable inf Ht -}
+UNREACHABLE: ITEM 75: {_automatic_coveritem_toggle__clk_div[7]__10__T__1__24 - spi_master - ../spi_demo/spi_master.v (10,24)-(10,31) <embedded> Unreachable inf PRE -}
+UNREACHABLE: ITEM 76: {_automatic_coveritem_toggle__clk_div[6]__10__T__1__24 - spi_master - ../spi_demo/spi_master.v (10,24)-(10,31) <embedded> Unreachable inf PRE -}
+UNREACHABLE: ITEM 77: {_automatic_coveritem_toggle__clk_div[5]__10__T__1__24 - spi_master - ../spi_demo/spi_master.v (10,24)-(10,31) <embedded> Unreachable inf PRE -}
+UNREACHABLE: ITEM 78: {_automatic_coveritem_toggle__clk_div[4]__10__T__1__24 - spi_master - ../spi_demo/spi_master.v (10,24)-(10,31) <embedded> Unreachable inf PRE -}
+UNREACHABLE: ITEM 79: {_automatic_coveritem_toggle__clk_div[3]__10__T__1__24 - spi_master - ../spi_demo/spi_master.v (10,24)-(10,31) <embedded> Unreachable inf PRE -}
+UNREACHABLE: ITEM 80: {_automatic_coveritem_toggle__clk_div[2]__10__T__1__24 - spi_master - ../spi_demo/spi_master.v (10,24)-(10,31) <embedded> Unreachable inf PRE -}
 UNDETERMINED: ITEM 108: {_automatic_coveritem_toggle__clk_cnt[7]__26__T__1__16 - spi_master - ../spi_demo/spi_master.v (26,16)-(26,23) <embedded> Undetermined 200 B -}
+UNREACHABLE: ITEM 116: {u_spi_master_prop._automatic_coveritem_toggle__clk__2__T__1__23 u_spi_master_prop spi_master_prop - property/spi_master_prop.sv (2,23)-(2,26) <embedded> Unreachable inf PRE -}
+UNREACHABLE: ITEM 117: {u_spi_master_prop._automatic_coveritem_toggle__rst_n__3__T__1__23 u_spi_master_prop spi_master_prop - property/spi_master_prop.sv (3,23)-(3,28) <embedded> Unreachable inf PRE reset}
+UNREACHABLE: ITEM 136: {u_spi_master_prop._automatic_coveritem_toggle__cpol__8__T__1__23 u_spi_master_prop spi_master_prop - property/spi_master_prop.sv (8,23)-(8,27) <embedded> Unreachable inf Ht -}
+UNREACHABLE: ITEM 137: {u_spi_master_prop._automatic_coveritem_toggle__cpha__9__T__1__23 u_spi_master_prop spi_master_prop - property/spi_master_prop.sv (9,23)-(9,27) <embedded> Unreachable inf Ht -}
+UNREACHABLE: ITEM 138: {u_spi_master_prop._automatic_coveritem_toggle__clk_div[7]__10__T__1__23 u_spi_master_prop spi_master_prop - property/spi_master_prop.sv (10,23)-(10,30) <embedded> Unreachable inf PRE -}
+UNREACHABLE: ITEM 139: {u_spi_master_prop._automatic_coveritem_toggle__clk_div[6]__10__T__1__23 u_spi_master_prop spi_master_prop - property/spi_master_prop.sv (10,23)-(10,30) <embedded> Unreachable inf PRE -}
+UNREACHABLE: ITEM 140: {u_spi_master_prop._automatic_coveritem_toggle__clk_div[5]__10__T__1__23 u_spi_master_prop spi_master_prop - property/spi_master_prop.sv (10,23)-(10,30) <embedded> Unreachable inf PRE -}
+UNREACHABLE: ITEM 141: {u_spi_master_prop._automatic_coveritem_toggle__clk_div[4]__10__T__1__23 u_spi_master_prop spi_master_prop - property/spi_master_prop.sv (10,23)-(10,30) <embedded> Unreachable inf PRE -}
+UNREACHABLE: ITEM 142: {u_spi_master_prop._automatic_coveritem_toggle__clk_div[3]__10__T__1__23 u_spi_master_prop spi_master_prop - property/spi_master_prop.sv (10,23)-(10,30) <embedded> Unreachable inf PRE -}
+UNREACHABLE: ITEM 143: {u_spi_master_prop._automatic_coveritem_toggle__clk_div[2]__10__T__1__23 u_spi_master_prop spi_master_prop - property/spi_master_prop.sv (10,23)-(10,30) <embedded> Unreachable inf PRE -}
 UNDETERMINED: ITEM 171: {u_spi_master_prop._automatic_coveritem_toggle__clk_cnt[7]__19__T__1__23 u_spi_master_prop spi_master_prop - property/spi_master_prop.sv (19,23)-(19,30) <embedded> Undetermined 200 B -}
+UNREACHABLE: ITEM 191: {spi_master.u_spi_master_prop.ast_reset_sclk:precondition1 u_spi_master_prop spi_master_prop - property/spi_master_prop.sv (314,1)-(315,1) <embedded> Unreachable inf PRE -}
+UNREACHABLE: ITEM 194: {spi_master.u_spi_master_prop.ast_shift_in_reset:precondition1 u_spi_master_prop spi_master_prop - property/spi_master_prop.sv (309,1)-(310,1) <embedded> Unreachable inf PRE -}
+UNREACHABLE: ITEM 197: {spi_master.u_spi_master_prop.ast_shift_out_reset:precondition1 u_spi_master_prop spi_master_prop - property/spi_master_prop.sv (304,1)-(305,1) <embedded> Unreachable inf PRE -}
+UNREACHABLE: ITEM 200: {spi_master.u_spi_master_prop.ast_mosi_reset:precondition1 u_spi_master_prop spi_master_prop - property/spi_master_prop.sv (299,1)-(300,1) <embedded> Unreachable inf PRE -}
+UNREACHABLE: ITEM 210: {spi_master.u_spi_master_prop.ast_reset_rx_data:precondition1 u_spi_master_prop spi_master_prop - property/spi_master_prop.sv (263,1)-(264,1) <embedded> Unreachable inf PRE -}
+UNREACHABLE: ITEM 211: {spi_master.u_spi_master_prop.ast_reset_clk_cnt:precondition1 u_spi_master_prop spi_master_prop - property/spi_master_prop.sv (262,1)-(263,1) <embedded> Unreachable inf PRE -}
+UNREACHABLE: ITEM 212: {spi_master.u_spi_master_prop.ast_reset_state:precondition1 u_spi_master_prop spi_master_prop - property/spi_master_prop.sv (258,1)-(259,1) <embedded> Unreachable inf PRE -}
+UNREACHABLE: ITEM 213: {spi_master.u_spi_master_prop.ast_reset_cs_n:precondition1 u_spi_master_prop spi_master_prop - property/spi_master_prop.sv (259,1)-(260,1) <embedded> Unreachable inf PRE -}
+UNREACHABLE: ITEM 214: {spi_master.u_spi_master_prop.ast_reset_done:precondition1 u_spi_master_prop spi_master_prop - property/spi_master_prop.sv (260,1)-(261,1) <embedded> Unreachable inf PRE -}
+UNREACHABLE: ITEM 215: {spi_master.u_spi_master_prop.ast_reset_bit_cnt:precondition1 u_spi_master_prop spi_master_prop - property/spi_master_prop.sv (261,1)-(262,1) <embedded> Unreachable inf PRE -}
 
 ============================================================
 COVERAGE SUMMARY
 ============================================================
-Total items:     214
-Covered:         175
+Total items:     227
+Covered:         184
 Undetermined:    2
-Unreachable:     37
+Unreachable:     41
 
-Raw coverage (all items):       81.78%
-Reachable coverage:             98.87%
+Raw coverage (all items):       81.06%
+Reachable coverage:             98.92%
 
-Waived items: 39 (37 unreachable + 2 undetermined)
-After waivers (175 covered / 175 effective): 100.00%
+Unreachable IDs: 6 8 9 10 11 12 13 14 15 16 17 53 54 73 74 75 76 77 78 79 80 116 117 136 137 138 139 140 141 142 143 191 194 197 200 210 211 212 213 214 215
+Undetermined IDs: 108 171
 
-============================================================
-UNREACHABLE ITEM CATEGORIES
-============================================================
-1. Reset branch statements (spi_master.v lines 29-39):     11 items
-   Reason: JG reset command handles rst_n, true branch never entered
-2. Clock/reset toggle (clk, rst_n):                         4 items
-   Reason: Constrained by JG clock/reset declarations
-3. cpol/cpha toggle:                                         4 items
-   Reason: Constrained by stable() assumptions
-4. clk_div upper bits toggle (clk_div 7:2):                12 items
-   Reason: Constrained by clk_div<=3 assumption
-5. Reset assertion preconditions:                            6 items
-   Reason: disable iff(!rst_n) contradicts !rst_n precondition
-6. clk_cnt bit7 toggle (undetermined):                       2 items
-   Reason: clk_cnt max=3 under constraint, bit 7 never toggles
-Total waived: 39 items
+After waivers (184 covered / 184 effective): 100.00%
