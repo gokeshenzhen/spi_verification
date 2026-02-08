@@ -1,0 +1,52 @@
+============================================================
+SPI SLAVE COVERAGE ANALYSIS
+============================================================
+
+UNREACHABLE: ITEM 11: {_automatic_coveritem_stmt_condition__nonblocking_assignment__1___S__29_1_1 - spi_slave - ../spi_demo/spi_slave.v (29,13)-(29,28) <embedded> Unreachable inf PRE reset}
+UNREACHABLE: ITEM 12: {_automatic_coveritem_stmt_condition__nonblocking_assignment__2___S__30_1_1 - spi_slave - ../spi_demo/spi_slave.v (30,13)-(30,28) <embedded> Unreachable inf PRE reset}
+UNREACHABLE: ITEM 15: {_automatic_coveritem_branch_condition__if_stmt_then__5___B__28_0_1 - spi_slave - ../spi_demo/spi_slave.v (28,21)-(31,12) <embedded> Unreachable inf PRE reset}
+UNREACHABLE: ITEM 17: {_automatic_coveritem_branch_condition__if_expr_then__13___B__42_0_1 - spi_slave - ../spi_demo/spi_slave.v (42,40)-(42,54) <embedded> Unreachable inf PRE -}
+UNREACHABLE: ITEM 19: {_automatic_coveritem_branch_condition__if_expr_then__17___B__43_0_1 - spi_slave - ../spi_demo/spi_slave.v (43,40)-(43,54) <embedded> Unreachable inf PRE -}
+UNREACHABLE: ITEM 21: {_automatic_coveritem_stmt_condition__nonblocking_assignment__22___S__47_1_1 - spi_slave - ../spi_demo/spi_slave.v (47,13)-(47,31) <embedded> Unreachable inf PRE reset}
+UNREACHABLE: ITEM 22: {_automatic_coveritem_stmt_condition__nonblocking_assignment__23___S__48_1_1 - spi_slave - ../spi_demo/spi_slave.v (48,13)-(48,31) <embedded> Unreachable inf PRE reset}
+UNREACHABLE: ITEM 23: {_automatic_coveritem_stmt_condition__nonblocking_assignment__24___S__49_1_1 - spi_slave - ../spi_demo/spi_slave.v (49,13)-(49,31) <embedded> Unreachable inf PRE reset}
+UNREACHABLE: ITEM 24: {_automatic_coveritem_stmt_condition__nonblocking_assignment__25___S__50_1_1 - spi_slave - ../spi_demo/spi_slave.v (50,13)-(50,31) <embedded> Unreachable inf PRE reset}
+UNREACHABLE: ITEM 25: {_automatic_coveritem_stmt_condition__nonblocking_assignment__26___S__51_1_1 - spi_slave - ../spi_demo/spi_slave.v (51,13)-(51,31) <embedded> Unreachable inf PRE reset}
+UNREACHABLE: ITEM 26: {_automatic_coveritem_stmt_condition__nonblocking_assignment__27___S__52_1_1 - spi_slave - ../spi_demo/spi_slave.v (52,13)-(52,31) <embedded> Unreachable inf PRE reset}
+UNREACHABLE: ITEM 27: {_automatic_coveritem_stmt_condition__nonblocking_assignment__28___S__53_1_1 - spi_slave - ../spi_demo/spi_slave.v (53,13)-(53,31) <embedded> Unreachable inf PRE reset}
+UNREACHABLE: ITEM 51: {_automatic_coveritem_branch_condition__if_stmt_then__65___B__46_0_1 - spi_slave - ../spi_demo/spi_slave.v (46,21)-(54,12) <embedded> Unreachable inf PRE reset}
+UNREACHABLE: ITEM 53: {u_spi_slave_prop._automatic_coveritem_branch_condition__if_expr_then__6___B__28_0_1 u_spi_slave_prop spi_slave_prop - property/spi_slave_prop.sv (28,40)-(28,54) <embedded> Unreachable inf PRE -}
+UNREACHABLE: ITEM 55: {u_spi_slave_prop._automatic_coveritem_branch_condition__if_expr_then__10___B__29_0_1 u_spi_slave_prop spi_slave_prop - property/spi_slave_prop.sv (29,40)-(29,54) <embedded> Unreachable inf PRE -}
+UNREACHABLE: ITEM 57: {_automatic_coveritem_toggle__clk__2__T__1__24 - spi_slave - ../spi_demo/spi_slave.v (2,24)-(2,27) <embedded> Unreachable inf PRE -}
+UNREACHABLE: ITEM 58: {_automatic_coveritem_toggle__rst_n__3__T__1__24 - spi_slave - ../spi_demo/spi_slave.v (3,24)-(3,29) <embedded> Unreachable inf PRE reset}
+UNREACHABLE: ITEM 80: {_automatic_coveritem_toggle__cpol__11__T__1__24 - spi_slave - ../spi_demo/spi_slave.v (11,24)-(11,28) <embedded> Unreachable inf PRE -}
+UNREACHABLE: ITEM 81: {_automatic_coveritem_toggle__cpha__12__T__1__24 - spi_slave - ../spi_demo/spi_slave.v (12,24)-(12,28) <embedded> Unreachable inf PRE -}
+UNREACHABLE: ITEM 94: {_automatic_coveritem_toggle__shift_out[0]__22__T__1__15 - spi_slave - ../spi_demo/spi_slave.v (22,15)-(22,24) <embedded> Unreachable inf PRE -}
+UNREACHABLE: ITEM 109: {u_spi_slave_prop._automatic_coveritem_toggle__clk__2__T__1__23 u_spi_slave_prop spi_slave_prop - property/spi_slave_prop.sv (2,23)-(2,26) <embedded> Unreachable inf PRE -}
+UNREACHABLE: ITEM 110: {u_spi_slave_prop._automatic_coveritem_toggle__rst_n__3__T__1__23 u_spi_slave_prop spi_slave_prop - property/spi_slave_prop.sv (3,23)-(3,28) <embedded> Unreachable inf PRE reset}
+UNREACHABLE: ITEM 132: {u_spi_slave_prop._automatic_coveritem_toggle__cpol__11__T__1__23 u_spi_slave_prop spi_slave_prop - property/spi_slave_prop.sv (11,23)-(11,27) <embedded> Unreachable inf PRE -}
+UNREACHABLE: ITEM 133: {u_spi_slave_prop._automatic_coveritem_toggle__cpha__12__T__1__23 u_spi_slave_prop spi_slave_prop - property/spi_slave_prop.sv (12,23)-(12,27) <embedded> Unreachable inf PRE -}
+UNREACHABLE: ITEM 143: {u_spi_slave_prop._automatic_coveritem_toggle__shift_out[0]__15__T__1__23 u_spi_slave_prop spi_slave_prop - property/spi_slave_prop.sv (15,23)-(15,32) <embedded> Unreachable inf PRE -}
+UNREACHABLE: ITEM 175: {spi_slave.u_spi_slave_prop.ast_reset_active:precondition1 u_spi_slave_prop spi_slave_prop - property/spi_slave_prop.sv (159,1)-(160,1) <embedded> Unreachable inf PRE -}
+UNREACHABLE: ITEM 176: {spi_slave.u_spi_slave_prop.ast_reset_miso:precondition1 u_spi_slave_prop spi_slave_prop - property/spi_slave_prop.sv (158,1)-(159,1) <embedded> Unreachable inf PRE -}
+UNREACHABLE: ITEM 177: {spi_slave.u_spi_slave_prop.ast_reset_rx_valid:precondition1 u_spi_slave_prop spi_slave_prop - property/spi_slave_prop.sv (157,1)-(158,1) <embedded> Unreachable inf PRE -}
+UNREACHABLE: ITEM 178: {spi_slave.u_spi_slave_prop.ast_reset_rx_data:precondition1 u_spi_slave_prop spi_slave_prop - property/spi_slave_prop.sv (156,1)-(157,1) <embedded> Unreachable inf PRE -}
+UNREACHABLE: ITEM 179: {spi_slave.u_spi_slave_prop.ast_reset_bit_cnt:precondition1 u_spi_slave_prop spi_slave_prop - property/spi_slave_prop.sv (160,1)-(161,1) <embedded> Unreachable inf PRE -}
+UNREACHABLE: ITEM 180: {spi_slave.u_spi_slave_prop.ast_reset_shift_in:precondition1 u_spi_slave_prop spi_slave_prop - property/spi_slave_prop.sv (161,1)-(162,1) <embedded> Unreachable inf PRE -}
+UNREACHABLE: ITEM 181: {spi_slave.u_spi_slave_prop.ast_reset_shift_out:precondition1 u_spi_slave_prop spi_slave_prop - property/spi_slave_prop.sv (162,1)-(163,1) <embedded> Unreachable inf PRE -}
+
+============================================================
+COVERAGE SUMMARY
+============================================================
+Total items:     184
+Covered:         152
+Undetermined:    0
+Unreachable:     32
+
+Raw coverage (all items):       82.61%
+Reachable coverage:             100.00%
+
+Unreachable IDs: 11 12 15 17 19 21 22 23 24 25 26 27 51 53 55 57 58 80 81 94 109 110 132 133 143 175 176 177 178 179 180 181
+Undetermined IDs: 
+
+After waivers (152 covered / 152 effective): 100.00%

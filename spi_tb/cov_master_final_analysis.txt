@@ -1,0 +1,37 @@
+============================================================
+SPI MASTER COVERAGE ANALYSIS (FINAL)
+============================================================
+
+UNDETERMINED: ITEM 108: {_automatic_coveritem_toggle__clk_cnt[7]__26__T__1__16 - spi_master - ../spi_demo/spi_master.v (26,16)-(26,23) <embedded> Undetermined 200 B -}
+UNDETERMINED: ITEM 171: {u_spi_master_prop._automatic_coveritem_toggle__clk_cnt[7]__19__T__1__23 u_spi_master_prop spi_master_prop - property/spi_master_prop.sv (19,23)-(19,30) <embedded> Undetermined 200 B -}
+
+============================================================
+COVERAGE SUMMARY
+============================================================
+Total items:     214
+Covered:         175
+Undetermined:    2
+Unreachable:     37
+
+Raw coverage (all items):       81.78%
+Reachable coverage:             98.87%
+
+Waived items: 39 (37 unreachable + 2 undetermined)
+After waivers (175 covered / 175 effective): 100.00%
+
+============================================================
+UNREACHABLE ITEM CATEGORIES
+============================================================
+1. Reset branch statements (spi_master.v lines 29-39):     11 items
+   Reason: JG reset command handles rst_n, true branch never entered
+2. Clock/reset toggle (clk, rst_n):                         4 items
+   Reason: Constrained by JG clock/reset declarations
+3. cpol/cpha toggle:                                         4 items
+   Reason: Constrained by stable() assumptions
+4. clk_div upper bits toggle (clk_div 7:2):                12 items
+   Reason: Constrained by clk_div<=3 assumption
+5. Reset assertion preconditions:                            6 items
+   Reason: disable iff(!rst_n) contradicts !rst_n precondition
+6. clk_cnt bit7 toggle (undetermined):                       2 items
+   Reason: clk_cnt max=3 under constraint, bit 7 never toggles
+Total waived: 39 items

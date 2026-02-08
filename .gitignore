@@ -1,0 +1,64 @@
+# JasperGold project directory
+jgproject/
+
+# Simulation artifacts
+simv
+simv.daidir/
+csrc/
+
+# Waveform and debug
+*.fsdb
+verdiLog/
+fsdbreportLog/
+novas.conf
+novas.rc
+ucli.key
+vc_hdrs.h
+
+# Logs
+*.log
+
+# Synthesis output
+spi_demo/synth_output.v
+
+# Intermediate coverage reports (regenerable)
+spi_tb/cov_master_detail.txt
+spi_tb/cov_master_all_detail.txt
+spi_tb/cov_slave_detail.txt
+spi_tb/cov_master_results.txt
+spi_tb/cov_slave_results.txt
+spi_tb/cov_master_reachable.txt
+spi_tb/cov_slave_reachable.txt
+spi_tb/cov_master_unreachable.txt
+spi_tb/cov_slave_unreachable.txt
+spi_tb/cov_master_reachable_detail.txt
+spi_tb/cov_master_unreachable_detail.txt
+spi_tb/cov_master_stimuli_*.txt
+spi_tb/cov_master_all_reachable.txt
+spi_tb/cov_master_all_unreachable.txt
+spi_tb/cov_master_all_items.txt
+spi_tb/cov_master_reachable_items.txt
+spi_tb/cov_master_unreachable_items.txt
+spi_tb/cov_master_reachable_excl_waived.txt
+spi_tb/cov_master_unreachable_excl_waived.txt
+spi_tb/cov_master_all_excl_waived.txt
+spi_tb/cov_slave_all_items.txt
+spi_tb/cov_slave_reachable_items.txt
+spi_tb/cov_slave_unreachable_items.txt
+spi_tb/cov_slave_all_excl_waived.txt
+spi_tb/cov_slave_reachable_excl_waived.txt
+spi_tb/cov_rpt_*.txt
+spi_tb/cov_help_full.txt
+spi_tb/cov_stim_*.txt
+spi_tb/cov_coi_*.txt
+spi_tb/cov_proof_*.txt
+spi_tb/*_persistency_data.xml
+spi_tb/cov_master_waivers.txt
+spi_tb/cov_slave_waivers.txt
+spi_tb/cov_pertype_extract.txt
+
+# FPV intermediate results (regenerable)
+spi_tb/fpv_master_results.txt
+spi_tb/fpv_slave_results.txt
+spi_tb/fpv_master_summary.txt
+spi_tb/fpv_slave_summary.txt
