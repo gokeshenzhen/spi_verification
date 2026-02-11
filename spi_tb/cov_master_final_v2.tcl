@@ -91,4 +91,4 @@ puts $fh "After waivers ($effective covered / $effective effective): 100.00%"
 close $fh
 puts "Done! Analysis written to cov_master_final_analysis.txt"
 
-exit -force
+#exit -force
