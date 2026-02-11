@@ -193,5 +193,6 @@ module spi_slave_prop (
     cov_miso_on_shift_edge      : cover property (p_miso_on_shift_edge);
     cov_cpha0_first_miso        : cover property (p_cpha0_first_miso);
     cov_bit_cnt_wrap            : cover property (p_bit_cnt_wrap);
+    cov_bit_cnt_inc_all: cover property ( @(posedge clk) disable iff (!rst_n) bit_cnt==1 ##[1:$] bit_cnt==2 ##[1:$] bit_cnt==3 ##[1:$] bit_cnt==4 ##[1:$] bit_cnt==5 ##[1:$] bit_cnt==6 ##[1:$] (bit_cnt==7 && cs_n==0 && sclk==0) ##[1:$] (bit_cnt==7 && cs_n==0 && sclk==1) ##[1:$] (bit_cnt==0 && cs_n==0 && sclk==0) ##[1:$] bit_cnt==0 && cs_n==0 && sclk==1 ##[1:$] bit_cnt==1 && cs_n==0 && sclk==0);
 
 endmodule
