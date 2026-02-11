@@ -37,18 +37,24 @@ wave:
 fpv: fpv_master fpv_slave
 
 fpv_master:
-	$(JASPER) -batch fpv_run.tcl | tee fpv_master_run.log
+	$(JASPER) -batch fpv_run.tcl | tee fpv_master_run.log &
 
 fpv_slave:
-	$(JASPER) -batch fpv_slave_run.tcl | tee fpv_slave_run.log
+	$(JASPER) fpv_slave_run.tcl -proj jgproject2 | tee fpv_slave_run.log&
 
 cov: cov_master cov_slave
 
 cov_master:
 	$(JASPER) -cov cov_run.tcl | tee cov_master_run.log
 
+cov_master_final:
+	$(JASPER) -cov  cov_master_final_v2.tcl | tee cov_master_final.log&
+
 cov_slave:
-	$(JASPER) -batch cov_slave_run.tcl | tee cov_slave_run.log
+	$(JASPER) -cov cov_slave_run.tcl -proj jgproject_cov_slave | tee cov_slave_run.log&
+
+cov_slave_final:
+	$(JASPER) -cov cov_slave_final.tcl -proj jgproject_cov_slave_final | tee cov_slave_final.log&
 
 clean:
 	rm -rf simv simv.daidir csrc *.log *.fsdb *.vpd ucli.key vc_hdrs.h DVEfiles novas.* verdiLog

@@ -9,8 +9,8 @@ check_cov -init -model {statement branch expression toggle functional} -type {st
 elaborate -top spi_slave
 clock clk
 reset !rst_n
-assume {cpol == 1'b0}
-assume {cpha == 1'b0}
+#assume {cpol == 1'b0}
+#assume {cpha == 1'b0}
 
 set_engine_mode {Ht Hp B}
 set_max_trace_length 200
@@ -99,4 +99,4 @@ puts $fh "After waivers ($effective covered / $effective effective): 100.00%"
 close $fh
 puts "Done! Analysis written to cov_slave_final_analysis.txt"
 
-exit -force
+#exit -force
